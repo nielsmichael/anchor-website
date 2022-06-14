@@ -1,9 +1,28 @@
-import React from 'react'
+import React, { useState, useRef, useContext } from 'react'
 import Image from 'next/image'
+import { ScrollContext } from '../utils/parallax-scroll'
 
 const Masthead: React.FC = () => {
+  const refContainer = useRef<HTMLDivElement>(null)
+  const { scrollY } = useContext(ScrollContext)
+
+  // length scrolled starts at zero
+  let progress = 0
+
+  const { current: elContainer } = refContainer
+  if (elContainer) {
+    // Calculates the length scrolled from the scroll position
+    progress = Math.min(1, scrollY / elContainer.clientHeight)
+  }
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center">
+    <div
+      ref={refContainer}
+      className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-10"
+      style={{
+        transform: `translateY(-${progress * 20}vh)`
+      }}
+    >
       <Image
         src="/assets/img/City-Buildings.jpg"
         className="absolute w-full h-full object-cover"
