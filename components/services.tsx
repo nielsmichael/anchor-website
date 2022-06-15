@@ -2,7 +2,7 @@ import React from 'react'
 
 const Services: React.FC = () => {
   return (
-    <div>
+    <div className='bg-anchor-black text-anchor-white'>
       Services
     </div>
   )

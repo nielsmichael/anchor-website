@@ -3,7 +3,7 @@ import Member from './member'
 
 const AboutAnchor: React.FC = () => {
   return (
-    <section className={`flex flex-col bg-white py-20 text-3xl md:text-4xl`}>
+    <section className={`flex flex-col bg-anchor-white py-20 text-3xl md:text-4xl`}>
       <div className="container mx-auto px-10">
         <p className="leading-tight max-w-4xl mx-auto text-3xl tracking-tight">
           <strong>Put your money to work.</strong>
