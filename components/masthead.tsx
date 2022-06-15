@@ -46,7 +46,7 @@ const Masthead: React.FC = () => {
         <Image src='/assets/arrow-more.svg' width={188 / 3} height={105 / 3} alt='scroll down'/>
       </div>
     </div>
-  );
+  )
 }
 
 export default Masthead

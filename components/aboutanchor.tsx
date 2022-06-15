@@ -22,7 +22,7 @@ const AboutAnchor: React.FC = () => {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
 export default AboutAnchor
