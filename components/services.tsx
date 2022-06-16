@@ -48,7 +48,7 @@ const Services: React.FC = () => {
             className={`${classes.servicesTxt} inline-block`}
             style={{ opacity: opacityBlock(scroll, 2) }}
           >
-            We enlist top of the line property managers in all our areas to
+            We enlist top of the line property managers to
             ensure that your investments are safe. You won't need to
             deal with the mundane aspects of being a property owner while
             generating your cash flow.
