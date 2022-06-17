@@ -1,15 +1,25 @@
 import React from 'react'
-import { ProjectBackground } from './project'
+import { ProjectBackground, ProjectContainer, ProjectLeft, ProjectRight } from './project'
 import { TileBackground, TileContent, TileWrapper, Tile } from './tile'
 
 const PastWork = () => (
   <TileWrapper numOfPages={3}>
-    <TileBackground><ProjectBackground /></TileBackground>
+    <TileBackground>
+      <ProjectBackground />
+    </TileBackground>
     <TileContent>
       <Tile
         page={0}
         renderContent={({ progress }) => (
-          <span className="text-9xl">Foo {progress}</span>
+          <ProjectContainer>
+            <ProjectLeft progress={progress}>
+              <div>Home renovations on 412 Lee Ave.</div>
+              <div className="text-3xl md:text-4xl font-semibold">
+                Yearly Income: $16,200
+              </div>
+            </ProjectLeft>
+            <ProjectRight progress={progress}></ProjectRight>
+          </ProjectContainer>
         )}
       ></Tile>
     </TileContent>
@@ -17,7 +27,15 @@ const PastWork = () => (
       <Tile
         page={1}
         renderContent={({ progress }) => (
-          <span className="text-9xl">Another Foo {progress}</span>
+          <ProjectContainer>
+            <ProjectLeft progress={progress}>
+              <div>Home renovations on 412 Lee Ave.</div>
+              <div className="text-3xl md:text-4xl font-semibold">
+                Yearly Income: $16,200
+              </div>
+            </ProjectLeft>
+            <ProjectRight progress={progress}></ProjectRight>
+          </ProjectContainer>
         )}
       ></Tile>
     </TileContent>
@@ -25,7 +43,15 @@ const PastWork = () => (
       <Tile
         page={2}
         renderContent={({ progress }) => (
-          <span className="text-9xl">You guessed it {progress}</span>
+          <ProjectContainer>
+            <ProjectLeft progress={progress}>
+              <div>Home renovations on 412 Lee Ave.</div>
+              <div className="text-3xl md:text-4xl font-semibold">
+                Yearly Income: $16,200
+              </div>
+            </ProjectLeft>
+            <ProjectRight progress={progress}></ProjectRight>
+          </ProjectContainer>
         )}
       ></Tile>
     </TileContent>

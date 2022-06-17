@@ -38,6 +38,9 @@ export const TileWrapper: React.FC<WrapperProps> = ({
       <div
         ref={refContainer}
         className="relative bg-anchor-black text-anchor-white"
+        style={{
+          height: numOfPages * 100 + 'vh'
+        }}
       >
         {children}
       </div>
