@@ -59,14 +59,14 @@ interface Props {
 }
 
 export const Tile: React.FC<Props> = ({ page, renderContent }) => {
-  const { currentPage, numOfPages } = useContext(TileContext);
-  const progress = Math.max(0, currentPage - page);
-  const refContainer = useRef<HTMLDivElement>(null);
+  const { currentPage, numOfPages } = useContext(TileContext)
+  const progress = Math.max(0, currentPage - page)
+  const refContainer = useRef<HTMLDivElement>(null)
 
-  let opacity = Math.min(1, Math.max(0, progress * 4));
+  let opacity = Math.min(1, Math.max(0, progress * 4))
   // Adjust opacity based on 'page' scroll depth
   if (progress > 0.85 && page < numOfPages - 1) {
-    opacity = Math.max(0, (1.0 - progress) * 4);
+    opacity = Math.max(0, (1.0 - progress) * 4)
   }
 
   return (
