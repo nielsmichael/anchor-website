@@ -16,7 +16,7 @@ const PastWork = () => (
             <ProjectLeft progress={progress}>
               <div>Home renovations on 412 Lee Ave.</div>
               <div className="text-3xl md:text-4xl font-semibold">
-                Yearly Income: $16,200
+                Annual Income: $16,200
               </div>
             </ProjectLeft>
             <ProjectRight progress={progress}>
@@ -24,7 +24,7 @@ const PastWork = () => (
                 src="/assets/properties/"
                 layout="responsive"
                 width={840}
-                height={1640}
+                height={1620}
                 alt="Image alt"
               />
             </ProjectRight>
@@ -40,7 +40,7 @@ const PastWork = () => (
             <ProjectLeft progress={progress}>
               <div>Home renovations on 412 Lee Ave.</div>
               <div className="text-3xl md:text-4xl font-semibold">
-                Yearly Income: $16,200
+                Annual Income: $16,200
               </div>
             </ProjectLeft>
             <ProjectRight progress={progress}>
@@ -48,7 +48,7 @@ const PastWork = () => (
                 src="/assets/properties/"
                 layout="responsive"
                 width={840}
-                height={1640}
+                height={1620}
                 alt="Image alt"
               />
             </ProjectRight>
@@ -64,7 +64,7 @@ const PastWork = () => (
             <ProjectLeft progress={progress}>
               <div>Home renovations on 412 Lee Ave.</div>
               <div className="text-3xl md:text-4xl font-semibold">
-                Yearly Income: $16,200
+                Annual Income: $16,200
               </div>
             </ProjectLeft>
             <ProjectRight progress={progress}>
@@ -72,7 +72,7 @@ const PastWork = () => (
                 src="/assets/properties/"
                 layout="responsive"
                 width={840}
-                height={1640}
+                height={1620}
                 alt="Image alt"
               />
             </ProjectRight>
