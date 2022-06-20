@@ -6,6 +6,7 @@ import AboutAnchor from '../components/aboutanchor'
 import Services from '../components/services'
 import PastWork from '../components/pastwork'
 import Values from '../components/values'
+import Contact from '../components/contact'
 
 const Home: NextPage = () => {
   return (
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <Services />
       <PastWork />
       <Values />
+      <Contact />
     </div>
   )
 }
