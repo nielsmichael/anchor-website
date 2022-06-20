@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 import { ProjectBackground, ProjectContainer, ProjectLeft, ProjectRight } from './project'
 import { TileBackground, TileContent, TileWrapper, Tile } from './tile'
 
@@ -18,7 +19,15 @@ const PastWork = () => (
                 Yearly Income: $16,200
               </div>
             </ProjectLeft>
-            <ProjectRight progress={progress}></ProjectRight>
+            <ProjectRight progress={progress}>
+              <Image
+                src="/assets/properties/"
+                layout="responsive"
+                width={840}
+                height={1640}
+                alt="Image alt"
+              />
+            </ProjectRight>
           </ProjectContainer>
         )}
       ></Tile>
@@ -34,7 +43,15 @@ const PastWork = () => (
                 Yearly Income: $16,200
               </div>
             </ProjectLeft>
-            <ProjectRight progress={progress}></ProjectRight>
+            <ProjectRight progress={progress}>
+              <Image
+                src="/assets/properties/"
+                layout="responsive"
+                width={840}
+                height={1640}
+                alt="Image alt"
+              />
+            </ProjectRight>
           </ProjectContainer>
         )}
       ></Tile>
@@ -50,12 +67,20 @@ const PastWork = () => (
                 Yearly Income: $16,200
               </div>
             </ProjectLeft>
-            <ProjectRight progress={progress}></ProjectRight>
+            <ProjectRight progress={progress}>
+              <Image
+                src="/assets/properties/"
+                layout="responsive"
+                width={840}
+                height={1640}
+                alt="Image alt"
+              />
+            </ProjectRight>
           </ProjectContainer>
         )}
       ></Tile>
     </TileContent>
   </TileWrapper>
-)
+);
 
 export default PastWork
