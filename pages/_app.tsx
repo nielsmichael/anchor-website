@@ -1,12 +1,15 @@
 import '../styles/globals.css'
 import ParallaxScroll from '../utils/parallax-scroll'
 import type { AppProps } from 'next/app'
+import SizeObserver from '../utils/size-observer'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ParallaxScroll>
-      <Component {...pageProps} />
-    </ParallaxScroll>
+    <SizeObserver>
+      <ParallaxScroll>
+        <Component {...pageProps} />
+      </ParallaxScroll>
+    </SizeObserver>
   )
 }
 
