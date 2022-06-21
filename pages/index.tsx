@@ -7,6 +7,7 @@ import Services from '../components/services'
 import PastWork from '../components/pastwork'
 import Values from '../components/values'
 import Contact from '../components/contact'
+import Footer from '../components/footer'
 
 const Home: NextPage = () => {
   return (
@@ -22,6 +23,7 @@ const Home: NextPage = () => {
       <PastWork />
       <Values />
       <Contact />
+      <Footer />
     </div>
   )
 }
