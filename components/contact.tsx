@@ -7,9 +7,9 @@ const Contact: React.FC = () => {
       <div className="flex flex-col flex-1 justify-center items-center pt-10 lg:pt-6">
         <div className="pb-10">
           <Image
-            src="/assets/img/anchor-investments-banner.png"
-            width={400}
-            height={100}
+            src="/assets/img/anchor-logo-sm.png"
+            width={50}
+            height={50}
             alt="Anchor Investments logo"
           />
         </div>

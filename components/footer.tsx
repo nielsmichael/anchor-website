@@ -4,8 +4,8 @@ import Image from 'next/image'
 
 const Footer: React.FC = () => (
   <footer>
-	<div>Hello</div>    
+    {/* <Image src="/assets/img/anchor-investments-banner.png" /> */}
   </footer>
-)
+);
 
 export default Footer
