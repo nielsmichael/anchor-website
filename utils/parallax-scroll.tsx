@@ -4,11 +4,15 @@ interface ScrollVal {
   scrollY: number
 }
 
+interface ParallaxProps {
+  children: React.ReactNode
+}
+
 export const ScrollContext = React.createContext<ScrollVal>({
   scrollY: 0
 })
 
-const ParallaxScroll: React.FC = ({ children }) => {
+const ParallaxScroll: React.FC<ParallaxProps> = ({ children }) => {
   const [scrollY, setScrollY] = useState(0)
   const scrollHandler = useCallback(() => {
     setScrollY(window.scrollY)
