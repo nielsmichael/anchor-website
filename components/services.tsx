@@ -41,22 +41,21 @@ const Services: React.FC = () => {
             className={`${classes.servicesTxt} inline-block after:content-['_']`}
             style={{ opacity: opacityBlock(scroll, 1) }}
           >
-            Anchor Investments takes on all your risk and payments all your bills,
-            managing the property so that you don't have to.
+            Anchor Investments takes on all your risk and payments all your
+            bills, managing the property so that you don&apos;t have to.
           </span>
           <span
             className={`${classes.servicesTxt} inline-block`}
             style={{ opacity: opacityBlock(scroll, 2) }}
           >
-            We enlist top of the line property managers to
-            ensure that your investments are safe. You won't need to
-            deal with the mundane aspects of being a property owner while
-            generating your cash flow.
+            We enlist top of the line property managers to ensure that your
+            investments are safe. You won&apos;t need to deal with the mundane
+            aspects of being a property owner while generating your cash flow.
           </span>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default Services

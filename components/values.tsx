@@ -5,8 +5,8 @@ const Values: React.FC = () => (
     <div className="flex flex-col justify-center items-center">
       <div className="container mx-auto lg:max-w-[70%] px-11 text-center">
         <h3 className="text-4xl xs:text-xl mb-10 font-semibold">
-          Anchor Investments has a "safety first" approach to managing your
-          investments.
+          Anchor Investments has a &quot;safety first&quot; approach to managing
+          your investments.
         </h3>
         <div className="text-xl">
           <p>
@@ -27,6 +27,6 @@ const Values: React.FC = () => (
       </div>
     </div>
   </section>
-)
+);
 
 export default Values

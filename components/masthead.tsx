@@ -26,6 +26,7 @@ const Masthead: React.FC = () => {
       <Image
         src="/assets/img/City-Buildings.jpg"
         className="absolute w-full h-full object-cover"
+        alt="Anchor Investments masthead background"
         layout="fill"
       />
       <div className={`flex-grow-0 pt-10 transition-opacity duration-1000`}>
