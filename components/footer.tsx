@@ -10,7 +10,7 @@ const Footer: React.FC = () => (
       height={100}
       alt="Anchor Investments logo"
     />
-    <Link href="/disclaimer">Disclaimer</Link>
+    <Link href="/process">Our Process</Link>
     <Link href="/privacy">Privacy Policy</Link>
   </footer>
 )

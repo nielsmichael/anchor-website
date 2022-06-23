@@ -1,8 +1,9 @@
-import React, { useRef, useContext } from 'react'
+import React, { useRef, useContext, Children } from 'react'
 import { ScrollContext } from '../utils/parallax-scroll'
 
 interface WrapperProps {
   numOfPages: number
+  children: React.ReactNode
 }
 
 interface TileContextValue {
@@ -48,11 +49,19 @@ export const TileWrapper: React.FC<WrapperProps> = ({
   );
 }
 
-export const TileBackground: React.FC = ({ children }) => (
+interface TileBgProps {
+  children: React.ReactNode
+}
+
+interface TileContProps {
+  children: React.ReactNode
+}
+
+export const TileBackground: React.FC<TileBgProps> = ({ children }) => (
   <div className='absolute h-full w-full'>{children}</div>
 )
 
-export const TileContent: React.FC = ({ children }) => (
+export const TileContent: React.FC<TileContProps> = ({ children }) => (
   <div className='sticky top-0 h-screen overflow-hidden'>{children}</div>
 )
 

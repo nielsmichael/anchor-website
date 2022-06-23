@@ -39,7 +39,7 @@ const Masthead: React.FC = () => {
       <div className="p-12 z-10 font-bold text-center justify-center items-center text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.5)] flex-1 flex flex-col">
         <h1 className="mb-6 text-4xl xl:text-6xl">Anchor Investments</h1>
         <h2 className="mb-3 text-2xl xl:text-3xl tracking-tight">
-          build your future.
+          Build your future.
         </h2>
       </div>
       <div className='flex-grow-0 pb-20 md:pb-10 transition-all duration-1000'>

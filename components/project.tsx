@@ -1,6 +1,10 @@
 import React from 'react'
 
-export const ProjectContainer: React.FC = ({children}) => (
+interface ProjContProps {
+  children: React.ReactNode
+}
+
+export const ProjectContainer: React.FC<ProjContProps> = ({children}) => (
   <div className='grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen'>{children}</div>
 )
 
