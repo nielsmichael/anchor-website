@@ -4,6 +4,16 @@ interface ProjContProps {
   children: React.ReactNode
 }
 
+interface ProjLeftProps {
+  children: React.ReactNode
+  progress: number
+}
+
+interface ProjRightProps {
+  children: React.ReactNode
+  progress: number
+}
+
 export const ProjectContainer: React.FC<ProjContProps> = ({children}) => (
   <div className='grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen'>{children}</div>
 )
@@ -15,7 +25,7 @@ export const ProjectBackground: React.FC = () => (
   </div>
 )
 
-export const ProjectLeft: React.FC<{progress: number}> = ({children, progress}) => {
+export const ProjectLeft: React.FC<ProjLeftProps> = ({children, progress}) => {
   // Similar for both ProjectLeft and ProjectRight, calculate Y based on scroll progress
   let translateY = Math.max(0, 50 - progress * 3 * 50)
   if (progress > 0.85) translateY = Math.max(-50, -(progress - 0.85) * 2 * 50)
@@ -31,7 +41,7 @@ export const ProjectLeft: React.FC<{progress: number}> = ({children, progress}) 
   )
 }
 
-export const ProjectRight: React.FC<{progress:number}> = ({ children, progress}) => {
+export const ProjectRight: React.FC<ProjRightProps> = ({ children, progress}) => {
   let translateY = Math.max(-50, -(progress - 0.5) * 50)
   return (
     <div className='flex flex-1 lg:items-center justify-center h-screen'
