@@ -1,4 +1,4 @@
-import React, { useState, useCallback} from 'react'
+import React, { useState, useCallback } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import axios from 'axios'
@@ -6,35 +6,38 @@ import axios from 'axios'
 const Contact: React.FC = () => {
   const [status, setStatus] = useState({
     submitted: false,
-    submitting:false,
-    info: { error: false, msg: null }
+    submitting: false,
+    info: { error: false, msg: null },
   })
 
   const [inputs, setInputs] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   })
 
-  const handleOnChange = useCallback((e: { persist: () => void; target: { id: any; value: any } }) => {
-    e.persist()
-    setInputs(prev => ({
-      ...prev,
-      [e.target.id]: e.target.value
-    }))
-    setStatus({
-      submitted: false,
-      submitting: false,
-      info: {error: false, msg: null }
-    })
-  }, [])
+  const handleOnChange = useCallback(
+    (e: { persist: () => void; target: { id: any; value: any } }) => {
+      e.persist();
+      setInputs((prev) => ({
+        ...prev,
+        [e.target.id]: e.target.value,
+      }))
+      setStatus({
+        submitted: false,
+        submitting: false,
+        info: { error: false, msg: null },
+      })
+    },
+    []
+  )
 
   const handleServerResponse = useCallback((ok: any, msg: any) => {
     if (ok) {
       setStatus({
         submitted: true,
         submitting: false,
-        info: {error: false, msg }
+        info: { error: false, msg },
       })
       setInputs({
         name: "",
@@ -50,17 +53,23 @@ const Contact: React.FC = () => {
     }
   }, [])
 
-  const handleSubmit = useCallback((e: { preventDefault: () => void }) => {
-    e.preventDefault()
-    setStatus(prevStatus => ({...prevStatus, submitting: true}))
-    axios({
-      method: "POST",
-      url: process.env.NEXT_PUBLIC_CONTACT_FORM_ENDPOINT_URL,
-      data: inputs
-    }).then(_response => {
-      handleServerResponse(true, 'Thank you for your inquiry! Your message has been submitted.')
-    })
-  }, [inputs, handleServerResponse])
+  const handleSubmit = useCallback(
+    (e: { preventDefault: () => void }) => {
+      e.preventDefault();
+      setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+      axios({
+        method: "POST",
+        url: process.env.NEXT_PUBLIC_CONTACT_FORM_KEY,
+        data: inputs,
+      }).then((_response) => {
+        handleServerResponse(
+          true,
+          "Thank you for your inquiry! Your message has been submitted."
+        )
+      })
+    },
+    [inputs, handleServerResponse]
+  )
 
   return (
     <div className="bg-anchor-black text-anchor-white flex flex-col justify-center pt-10 min-h-screen">
@@ -88,7 +97,10 @@ const Contact: React.FC = () => {
             </div>
           )}
           {status.submitted ? (
-            <div role="alert" className="text-anchor-white text-xl font-bold px-5 py-3 rounded relative">
+            <div
+              role="alert"
+              className="text-anchor-white text-xl font-bold px-5 py-3 rounded relative"
+            >
               Your message was successfully sent. A representative will contact
               you as soon as we are able!
             </div>
@@ -131,11 +143,11 @@ const Contact: React.FC = () => {
                   type="submit"
                   className="bg-anchor-white text-anchor-black rounded-3xl px-8 py-2"
                 >
-                  {!status.submitting 
+                  {!status.submitting
                     ? !status.submitted
-                    ? 'Submit'
-                    : 'Submitted'
-                    : 'Submitting...'}
+                      ? "Submit"
+                      : "Submitted"
+                    : "Submitting..."}
                 </button>
               </div>
             </>
@@ -159,7 +171,7 @@ const Contact: React.FC = () => {
         </Link>
       </div>
     </div>
-  );
+  )
 }
 
 export default Contact
